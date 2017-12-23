@@ -69,11 +69,11 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
             android:layout_marginTop="24dp"
-            android:background="@android:color/holo_red_light"
+            android:background="@android:color/holo_orange_dark"
             android:padding="12dp"
             android:text="Login"
-            android:onClick="loginAction"
-            android:textColor="@android:color/darker_gray" />
+
+            android:textColor="@android:color/widget_edittext_dark" />
 
         <TextView
             android:id="@+id/link_signup"
