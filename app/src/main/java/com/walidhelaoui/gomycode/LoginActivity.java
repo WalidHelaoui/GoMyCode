@@ -20,6 +20,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
 
+    public static final String ServerAddress = "http://192.168.0.100/";
     private static final String TAG = "LoginActivity";
     EditText login_edt,password_edt;
     Button loginBtn;
@@ -60,10 +61,10 @@ public class LoginActivity extends AppCompatActivity {
              public void onComplete(@NonNull Task<AuthResult> task) {
                  if(task.isSuccessful()){
                      Toast.makeText(LoginActivity.this,"sign in",Toast.LENGTH_SHORT).show();
-                     Log.e(TAG,"aaa");
+                     startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                     finish();
                  }else {
-                     Log.e(TAG,"bbb");
-
+                     Toast.makeText(LoginActivity.this,"sign in problem",Toast.LENGTH_SHORT).show();
                  }
              }
          });
