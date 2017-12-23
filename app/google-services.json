@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "566663822246",
+    "firebase_url": "https://gomycode-9368c.firebaseio.com",
+    "project_id": "gomycode-9368c",
+    "storage_bucket": "gomycode-9368c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:566663822246:android:123b299235997896",
+        "android_client_info": {
+          "package_name": "com.walidhelaoui.gomycode"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "566663822246-dlobapb23vcuqkb732qh68litdhrit44.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCEqb0-3CaVh83ke0wahso3qiMgVAEEng"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
