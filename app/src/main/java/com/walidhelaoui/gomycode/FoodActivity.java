@@ -11,13 +11,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.walidhelaoui.gomycode.Controller.FoodAdapter;
 import com.walidhelaoui.gomycode.utils.FoodDataSource;
 
-public class MainActivity extends AppCompatActivity {
+public class FoodActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
     private Toolbar toolbar;
@@ -28,10 +27,10 @@ public class MainActivity extends AppCompatActivity {
         public void run()
 
         {
-            MainActivity.this.mHandler.postDelayed(m_Runnable, 3000);
+            FoodActivity.this.mHandler.postDelayed(m_Runnable, 3000);
 
             if (!FoodDataSource.foods.isEmpty()){
-                FoodAdapter adapter = new FoodAdapter(MainActivity.this, FoodDataSource.foods);
+                FoodAdapter adapter = new FoodAdapter(FoodActivity.this, FoodDataSource.foods);
                 listView.setAdapter(adapter);
                 mHandler.removeCallbacksAndMessages(null);
             }
@@ -41,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_food);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -53,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         FoodDataSource.setFood(this);
         FoodAdapter adapter = new FoodAdapter(this, FoodDataSource.foods);
         listView.setAdapter(adapter);
-        //startActivity(new Intent(MainActivity.this,SearchActivity.class));
+        //startActivity(new Intent(FoodActivity.this,SearchActivity.class));
         initNavigationDrawer();
     }
 
@@ -69,15 +68,15 @@ public class MainActivity extends AppCompatActivity {
                 switch (id){
                     case R.id.home:
                         Toast.makeText(getApplicationContext(),"Home",Toast.LENGTH_SHORT).show();
-                        //replaceFragment(new SmokeFragment(MainActivity.this));
-                        startActivity(new Intent(MainActivity.this,MainActivity.class));
+                        //replaceFragment(new SmokeFragment(FoodActivity.this));
+                        startActivity(new Intent(FoodActivity.this,SearchActivity.class));
                         drawerLayout.closeDrawers();
                         break;
-                    case R.id.settings:
+                    case R.id.food:
                         drawerLayout.closeDrawers();
                         break;
                     case R.id.logout:
-                        startActivity(new Intent(MainActivity.this,LoginActivity.class));
+                        startActivity(new Intent(FoodActivity.this,LoginActivity.class));
 
                 }
                 return true;

@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -39,7 +37,7 @@ public class LoginActivity extends AppCompatActivity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                    startActivity(new Intent(LoginActivity.this,SearchActivity.class));
                     //startSignIn();
             }
         });
@@ -62,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
              public void onComplete(@NonNull Task<AuthResult> task) {
                  if(task.isSuccessful()){
                      Toast.makeText(LoginActivity.this,"sign in",Toast.LENGTH_SHORT).show();
-                     startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                     startActivity(new Intent(LoginActivity.this,FoodActivity.class));
                      finish();
                  }else {
                      Toast.makeText(LoginActivity.this,"sign in problem",Toast.LENGTH_SHORT).show();
