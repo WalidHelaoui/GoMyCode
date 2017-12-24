@@ -1,5 +1,6 @@
 package com.walidhelaoui.gomycode;
 
+import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -40,6 +41,6 @@ public class MainActivity extends AppCompatActivity {
         FoodDataSource.setFood(this);
         FoodAdapter adapter = new FoodAdapter(this, FoodDataSource.foods);
         listView.setAdapter(adapter);
-
+        startActivity(new Intent(MainActivity.this,SearchActivity.class));
     }
 }
