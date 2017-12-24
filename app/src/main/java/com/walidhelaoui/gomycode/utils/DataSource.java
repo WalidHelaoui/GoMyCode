@@ -45,6 +45,7 @@ public class DataSource {
                                 data.setCity(jsonArray.getJSONObject(i).getString("city"));
                                 data.setPrice(jsonArray.getJSONObject(i).getLong("price"));
                                 data.setType(jsonArray.getJSONObject(i).getString("type"));
+                                data.setPlace(jsonArray.getJSONObject(i).getString("place"));
                                 datas.add(data);
                             }
                             Log.e(TAG,jsonArray.toString());

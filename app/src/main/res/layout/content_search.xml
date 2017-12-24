@@ -16,25 +16,27 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="19dp"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="number" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignBottom="@+id/editText"
         android:layout_alignEnd="@+id/EventscheckBox"
         android:onClick="searchAction"
-        android:text="Search" />
+        android:background="@drawable/budget"
+       />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignTop="@+id/button2"
         android:layout_toEndOf="@+id/EventscheckBox"
         android:onClick="clearAction"
-        android:text="Clear" />
+        android:background="@drawable/clear"
+  />
 
     <CheckBox
         android:id="@+id/AllcheckBox"
